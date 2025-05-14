@@ -21,43 +21,45 @@ Perusahaan **Jaya Jaya Maju** mengalami masalah tingkat *attrition* karyawan \>1
 
 ## Cara Menjalankan Proyek
 
-### Prasyarat
-
-  - Python 3.8+
-  - Pip *package manager*
-
 ### Instalasi
 
 ```bash
 # Clone repositori
-git clone [repo_url]
+git clone https://github.com/107rasyid/Menyelesaikan-Permasalahan-Human-Resources
+```
 
-# Buat virtual environment
+### Buat virtual environment
+```bash
 python -m venv venv
+```
 
-# Aktifkan virtual environment
-# Untuk Linux/MacOS:
+### Aktifkan virtual environment
+### Untuk Linux/MacOS:
+```bash
 source venv/bin/activate
+```
 
-# Untuk Windows:
+### Untuk Windows:
+```bash
 .\venv\Scripts\activate
+```
 
-# Install dependencies
+### Install dependencies
+```bash
 pip install -r requirements.txt
 ```
 
-## Menjalankan Aplikasi
+## Menjalankan Aplikasi Predict
 ```bash
 `streamlit run src/prediction.py`
 ```
-
-# Buka *browser* di `http://localhost:8501`
-# Isi *form input* sesuai data karyawan
-# Klik tombol **Predict Attrition**
+Buka *browser* di `http://localhost:8501`
+Isi *form input* sesuai data karyawan
+Klik tombol **Predict Attrition**
 
 ## Hasil Analisis
 
-# Faktor Penentu *Attrition*
+### Faktor Penentu *Attrition*
 
 | Peringkat | Fitur            | Tingkat Pengaruh |
 | --------- | ---------------- | ---------------- |
@@ -67,7 +69,7 @@ pip install -r requirements.txt
 | 4         | `DailyRate`      | 8.01%            |
 | 5         | `StockOptionLevel` | 7.96%            |
 
-## Performa Model
+### Performa Model
 
 | Metric    | Training | Testing |
 | --------- | -------- | ------- |
@@ -78,6 +80,6 @@ pip install -r requirements.txt
 
 ## Kontak
 
-Nama: Rasyid Alfiansyah
-Email: `rasyidalfiansyh@gmail.com`
-Dicoding ID: rasyidalfiansyh
+- Nama: Rasyid Alfiansyah
+- Email: `rasyidalfiansyh@gmail.com`
+- Dicoding ID: rasyidalfiansyh
