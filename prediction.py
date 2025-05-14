@@ -25,7 +25,7 @@ def preprocess_input(new_data):
 
 
 def load_model_and_predict(features):
-    model = joblib.load('best_model_gb.joblib')
+    model = joblib.load('model.joblib')
     return model.predict(features)[0]
 
 
