@@ -14,7 +14,6 @@ Perusahaan **Jaya Jaya Maju** mengalami masalah tingkat *attrition* karyawan \>1
 ├──`model.joblib`\
 ├──`prediction.py`\
 ├──`notebook.ipynb`\
-├──`metabase.db.mv.db`\
 ├──`requirements.txt`\
 ├──`README.md`\
 ├──`dashboard-preview.png`
