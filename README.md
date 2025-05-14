@@ -10,14 +10,14 @@ Perusahaan **Jaya Jaya Maju** mengalami masalah tingkat *attrition* karyawan \>1
 
 ## Struktur Direktori
 
-`employee_data_cleaned.csv`
-`model.joblib`
-`prediction.py`
-`notebook.ipynb`
-`metabase.db.mv.db`
-`requirements.txt`
-`README.md`
-`dashboard-preview.png`
+├──`employee_data_cleaned.csv`
+├──`model.joblib`
+├──`prediction.py`
+├──`notebook.ipynb`
+├──`metabase.db.mv.db`
+├──`requirements.txt`
+├──`README.md`
+├──`dashboard-preview.png`
 
 ## Cara Menjalankan Proyek
 
@@ -54,7 +54,7 @@ pip install -r requirements.txt
 `streamlit run src/prediction.py`
 ```
 Buka *browser* di `http://localhost:8501`
-Isi *form input* sesuai data karyawan
+Isi *form input* sesuai data karyawan\
 Klik tombol **Predict Attrition**
 
 ## Hasil Analisis
