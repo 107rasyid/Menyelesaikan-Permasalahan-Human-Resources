@@ -44,10 +44,12 @@ source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+```
 
 ## Menjalankan Aplikasi
-
+```bash
 `streamlit run src/prediction.py`
+```
 
 # Buka *browser* di `http://localhost:8501`
 # Isi *form input* sesuai data karyawan
