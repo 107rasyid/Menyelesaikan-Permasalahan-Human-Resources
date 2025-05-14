@@ -81,9 +81,6 @@ Klik tombol **Predict Attrition**
 | 5         | `StockOptionLevel` | 7.96%            |
 
 ### Performa Model Prediksi *Attrition*
-
-### Performa Model Prediksi *Attrition*
-
 Model *Gradient Boosting Classifier* dimanfaatkan untuk memprediksi risiko seorang karyawan meninggalkan perusahaan (*attrition*). Proses pelatihan model ini melibatkan analisis data karyawan yang ada, dengan mengandalkan serangkaian **fitur utama sebagai input prediksi**. Fitur-fitur tersebut mencakup `Age`, `BusinessTravel`, `DailyRate`, `Department`, `DistanceFromHome`, `Education`, `EnvironmentSatisfaction`, `Gender`, `JobInvolvement`, `JobLevel`, `JobRole`, `JobSatisfaction`, `MaritalStatus`, `MonthlyIncome`, `MonthlyRate`, `NumCompaniesWorked`, `OverTime`, `PercentSalaryHike`, `PerformanceRating`, `RelationshipSatisfaction`, `StockOptionLevel`, `TotalWorkingYears`, `TrainingTimesLastYear`, `WorkLifeBalance`, `YearsAtCompany`, `YearsInCurrentRole`, `YearsSinceLastPromotion`, dan `YearsWithCurrManager`. Melalui pembelajaran dari pola data historis, model ini mampu mengidentifikasi karyawan dengan karakteristik serupa dengan mereka yang telah mengalami *attrition* sebelumnya.
 
 ### Performa Model
