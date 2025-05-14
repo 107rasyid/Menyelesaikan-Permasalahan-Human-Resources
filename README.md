@@ -1,60 +1,70 @@
-# Proyek Pertama: Menyelesaikan Permasalahan Human Resources
+# Proyek Pertama: Analisis dan Prediksi Employee Attrition
 
-## Ringkasan Proyek
-Jaya Jaya Maju mengalami attrition rate tinggi (>10%). Tujuan proyek ini:
-1. Eksplorasi data karyawan.  
-2. Memetakan faktor penyebab keluar (attrition).  
-3. Membangun model **Gradient Boosting** untuk prediksi risiko attrition.  
-4. Menyediakan script (`prediction.py`) untuk memprediksi lewat antarmuka Streamlit.  
+## Latar Belakang
+Perusahaan Jaya Jaya Maju mengalami masalah tingkat attrition karyawan >10%. Proyek ini bertujuan untuk:
+1. Menganalisis faktor-faktor yang mempengaruhi employee attrition
+2. Membangun model prediktif untuk mengidentifikasi risiko attrition
+3. Membuat dashboard prediksi interaktif untuk HR
 
 ## Struktur Direktori
-submission/
-├── employee_data_cleaned.csv # Dataset sudah dibersihkan
-├── prediction.py # Streamlit app untuk prediksi
-├── best_model_gb.joblib # Model terlatih (Gradient Boosting)
-├── requirements.txt # Daftar dependensi dengan versi
-├── notebook.ipynb # Analisis data & model training
-├── README.md # Dokumen ini
-└── <username>-dashboard.png
+employee_data_cleaned.csv
+model.joblib
+prediction.py
+notebook.ipynb
+metabase.db.mv.db
+requirements.txt
+README.md
+dashboard-preview.png
 
-## Cara Menjalankan Notebook
-1. Pastikan lingkungan Python terpasang dependensi (lihat `requirements.txt`).  
-2. Buka `notebook.ipynb` di Jupyter/Colab.  
-3. Jalankan cell secara berurutan untuk EDA, training, dan evaluasi.  
+## Cara Menjalankan Proyek
 
-## Cara Menjalankan Streamlit App
-1. Install library:
-   ```bash
-   pip install -r requirements.txt
-Pastikan file employee_data_cleaned.csv dan best_model_gb.joblib ada di folder yang sama.
+### Prasyarat
+- Python 3.8+
+- Pip package manager
 
-Jalankan:
-streamlit run prediction.py
+### Instalasi
+```bash
+# Clone repositori
+git clone [repo_url]
 
-Buka browser di http://localhost:8501.
+# Buat virtual environment
+python -m venv venv
 
-Isi form, klik Predict Attrition, hasil akan ditampilkan.
+# Aktifkan virtual environment
+# Untuk Linux/MacOS:
+source venv/bin/activate
 
-Hasil dan Insight (Sementara)
-Model Gradient Boosting memiliki performa terbaik pada data testing.
+# Untuk Windows:
+.\venv\Scripts\activate
 
-Fitur paling berpengaruh: JobLevel, MonthlyIncome, OverTime.
+# Install dependencies
+pip install -r requirements.txt
 
-Contoh Tampilan Aplikasi
 
-Troubleshooting
-File tidak ditemukan: Pastikan employee_data_cleaned.csv dan best_model_gb.joblib berada di direktori yang sama dengan prediction.py.
+## Menjalankan Aplikasi
+streamlit run src/prediction.py
 
-Error encoding/scaling: Jika muncul NaN pada saat prediksi, pastikan file CSV bersih dan kolom input form lengkap sesuai fitur model.
+# Buka browser di http://localhost:8501
+# Isi form input sesuai data karyawan
+# Klik tombol Predict Attrition
 
-Rencana Selanjutnya
-Buat Business Dashboard interaktif (Metabase / Tableau / Looker Studio) dengan data yang sama.
+## Hasil Analisis
+# Faktor Penentu Attrition
+Peringkat	Fitur	Tingkat Pengaruh
+1	OverTime	11.9%
+2	MonthlyIncome	9.65%
+3	Age	8.54%
+4	DailyRate	8.01%
+5	StockOptionLevel	7.96%
 
-Tulis Kesimpulan & Rekomendasi berbasis insight EDA & model.
+## Performa Model
+Metric	Training	Testing
+Accuracy	0.97	0.88
+Precision	0.96	0.85
+Recall	0.98	0.89
+F1-Score	0.97	0.87
 
-Kontak
-Nama : Rasyid Alfiansyah
-
+## Kontak
+Nama: Rasyid Alfiansyah
 Email: rasyidalfiansyh@gmail.com
-
 Dicoding ID: rasyidalfiansyh
