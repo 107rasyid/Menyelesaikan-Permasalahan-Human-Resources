@@ -19,6 +19,18 @@ Perusahaan **Jaya Jaya Maju** mengalami masalah tingkat *attrition* karyawan \>1
 ├──`README.md`\
 ├──`dashboard-preview.png`
 
+## Link ke Dashboard Tableau Public
+
+Anda dapat mengakses dashboard interaktif melalui tautan berikut:
+
+[Jaya Jaya Maju Employees Attrition Dashboard](https://public.tableau.com/views/JayaJayaMajuEmployeesAttritionDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+## Tampilan Dashboard
+
+Berikut adalah tampilan *screenshot* dari *dashboard* yang telah dibuat:
+
+![Tampilan Dashboard](dashboard-preview.png)
+
 ## Cara Menjalankan Proyek
 
 ### Instalasi
