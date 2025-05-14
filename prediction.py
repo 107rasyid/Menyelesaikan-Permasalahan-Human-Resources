@@ -6,7 +6,9 @@ import joblib
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
 def preprocess_input(new_data):
-    base = pd.read_csv('employee_data_cleaned.csv').drop(['EmployeeId','Attrition'],1)
+    base = pd.read_csv('employee_data_cleaned.csv').drop(
+        ['EmployeeId','Attrition'], axis=1
+    )
     combined = pd.concat([base, new_data], ignore_index=True)
 
     # Isi NaN numerik dengan median, kategori dengan modus
