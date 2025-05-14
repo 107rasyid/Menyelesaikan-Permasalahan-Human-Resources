@@ -15,7 +15,7 @@ submission/
 ├── requirements.txt # Daftar dependensi dengan versi
 ├── notebook.ipynb # Analisis data & model training
 ├── README.md # Dokumen ini
-└── <username>-dashboard.png # Screenshot dashboard (belum dibuat)
+└── <username>-dashboard.png
 
 ## Cara Menjalankan Notebook
 1. Pastikan lingkungan Python terpasang dependensi (lihat `requirements.txt`).  
@@ -34,3 +34,27 @@ streamlit run prediction.py
 Buka browser di http://localhost:8501.
 
 Isi form, klik Predict Attrition, hasil akan ditampilkan.
+
+Hasil dan Insight (Sementara)
+Model Gradient Boosting memiliki performa terbaik pada data testing.
+
+Fitur paling berpengaruh: JobLevel, MonthlyIncome, OverTime.
+
+Contoh Tampilan Aplikasi
+
+Troubleshooting
+File tidak ditemukan: Pastikan employee_data_cleaned.csv dan best_model_gb.joblib berada di direktori yang sama dengan prediction.py.
+
+Error encoding/scaling: Jika muncul NaN pada saat prediksi, pastikan file CSV bersih dan kolom input form lengkap sesuai fitur model.
+
+Rencana Selanjutnya
+Buat Business Dashboard interaktif (Metabase / Tableau / Looker Studio) dengan data yang sama.
+
+Tulis Kesimpulan & Rekomendasi berbasis insight EDA & model.
+
+Kontak
+Nama : Rasyid Alfiansyah
+
+Email: rasyidalfiansyh@gmail.com
+
+Dicoding ID: rasyidalfiansyh
