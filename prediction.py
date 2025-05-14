@@ -6,21 +6,22 @@ import joblib
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
 def preprocess_input(new_data):
-    # Load cleaned dataset and merge for consistent encoding
-    base = pd.read_csv('employee_data_cleaned.csv')
-    base = base.drop(['EmployeeId', 'Attrition'], axis=1)
+    base = pd.read_csv('employee_data_cleaned.csv').drop(['EmployeeId','Attrition'],1)
     combined = pd.concat([base, new_data], ignore_index=True)
 
-    # Identify feature types
-    num_cols = combined.select_dtypes(include=['int64', 'float64']).columns
+    # Isi NaN numerik dengan median, kategori dengan modus
+    num_cols = combined.select_dtypes(include=['number']).columns
     cat_cols = combined.select_dtypes(include=['object']).columns
 
-    # Encode categories and scale numericals
-    for col in cat_cols:
-        combined[col] = LabelEncoder().fit_transform(combined[col])
+    combined[num_cols] = combined[num_cols].fillna(combined[num_cols].median())
+    for c in cat_cols:
+        combined[c] = combined[c].fillna(combined[c].mode()[0])
+
+    # Lanjutkan encoding & scaling
+    for c in cat_cols:
+        combined[c] = LabelEncoder().fit_transform(combined[c])
     combined[num_cols] = MinMaxScaler().fit_transform(combined[num_cols])
 
-    # Return only the last row (the user input)
     return combined.iloc[[-1]]
 
 
