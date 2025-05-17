@@ -1,22 +1,28 @@
-# Proyek Pertama: Analisis dan Prediksi *Employee Attrition*
+# Proyek Pertama: Menyelesaikan Permasalahan Perusahaan Jaya Jaya Maju
 
-## Latar Belakang
+## Business Understanding
+Perusahaan **Jaya Jaya Maju**, yang bergerak di bidang edutech dan pengembangan sumber daya manusia, menghadapi masalah tingginya tingkat employee attrition atau pengunduran diri karyawan secara sukarela. Angka attrition melebihi 10% dan dikhawatirkan akan memengaruhi produktivitas serta efisiensi perusahaan secara keseluruhan.
 
-Perusahaan **Jaya Jaya Maju** mengalami masalah tingkat *attrition* karyawan \>10%. Proyek ini bertujuan untuk:
+## Permasalahan Bisnis
+Perusahaan Jaya Jaya Maju mengalami tingkat employee attrition yang tinggi, melebihi 10% dalam setahun terakhir. Tingginya tingkat attrition ini menyebabkan berbagai dampak negatif terhadap keberlangsungan bisnis, seperti:
+- Peningkatan biaya rekrutmen dan pelatihan karyawan baru
+- Penurunan produktivitas dan beban kerja yang meningkat pada tim yang ditinggalkan
+- Hilangnya pengetahuan dan keahlian penting dalam organisasi
 
-1.  Menganalisis faktor-faktor yang mempengaruhi *employee attrition*
-2.  Membangun model prediktif untuk mengidentifikasi risiko *attrition*
-3.  Membuat *dashboard* prediksi interaktif untuk HR
+Namun, perusahaan belum memiliki sistem yang mampu:
+- Mengidentifikasi secara dini karyawan dengan risiko attrition tinggi
+- Menganalisis faktor-faktor utama yang menyebabkan attrition
+- Menyediakan alat bantu pengambilan keputusan berbasis data bagi tim HR
 
-## Struktur Direktori
+Oleh karena itu, diperlukan sebuah solusi berbasis data untuk memahami akar masalah dan mendukung strategi retensi karyawan secara proaktif.
 
-├──`employee_data_cleaned.csv`\
-├──`model.joblib`\
-├──`prediction.py`\
-├──`notebook.ipynb`\
-├──`requirements.txt`\
-├──`README.md`\
-├──`dashboard-preview.png`
+## Cakupan Proyek
+- Eksplorasi dan analisis data karyawan.
+- Pembuatan model prediktif untuk attrition.
+- Visualisasi data dan hasil prediksi dalam bentuk dashboard Tableau.
+- Deployment model prediktif menggunakan Streamlit.
+
+## Persiapan
 
 ## Link ke Dashboard Tableau Public
 
