@@ -23,8 +23,28 @@ Oleh karena itu, diperlukan sebuah solusi berbasis data untuk memahami akar masa
 - Deployment model prediktif menggunakan Streamlit.
 
 ## Persiapan
+Sumber data: Data yang digunakan dalam proyek ini berasal dari Employee Data yang memuat berbagai informasi terkait karyawan, seperti usia, departemen, tingkat pendidikan, pendapatan bulanan, serta apakah karyawan tersebut mengalami attrition (keluar dari perusahaan) atau tidak. Sebelum digunakan untuk analisis, data ini terlebih dahulu dibersihkan menggunakan Notebook. Setelah proses ini, diperoleh Cleaned Employee Data yang siap digunakan dalam proses eksplorasi data, pemodelan prediktif, serta pembuatan visualisasi interaktif untuk mendukung pengambilan keputusan oleh tim HR.
 
-## Link ke Dashboard Tableau Public
+Setup environment:
+```
+# Clone repositori
+git clone https://github.com/107rasyid/Menyelesaikan-Permasalahan-Human-Resources
+
+# Membuat virtual environment
+python -m venv venv
+
+# Mengaktifkan virtual environment
+# Untuk Linux/MacOS
+source venv/bin/activate
+# Untuk Windows
+.\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+## Business Dashboard
+Dashboard ini dirancang untuk menampilkan visualisasi analisis faktor penyebab attrition, distribusi demografi karyawan, serta insight lainnya berdasarkan departemen, peran kerja, dan usia. Dashboard ini mempermudah tim HR dalam membuat keputusan berbasis data.
 
 Anda dapat mengakses dashboard interaktif melalui tautan berikut:
 
@@ -36,46 +56,7 @@ Berikut adalah tampilan *screenshot* dari *dashboard* yang telah dibuat:
 
 ![Tampilan Dashboard](dashboard-preview.png)
 
-## Cara Menjalankan Proyek
-
-### Instalasi
-
-```bash
-# Clone repositori
-git clone https://github.com/107rasyid/Menyelesaikan-Permasalahan-Human-Resources
-```
-
-### Buat virtual environment
-```bash
-python -m venv venv
-```
-
-### Aktifkan virtual environment
-### Untuk Linux/MacOS:
-```bash
-source venv/bin/activate
-```
-
-### Untuk Windows:
-```bash
-.\venv\Scripts\activate
-```
-
-### Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-## Menjalankan Aplikasi Predict
-```bash
-`streamlit run src/prediction.py`
-```
-Buka *browser* di `http://localhost:8501`\
-Isi *form input* sesuai data karyawan\
-Klik tombol **Predict Attrition**
-
 ## Hasil Analisis
-
 ### Faktor Penentu *Attrition*
 
 | Peringkat | Fitur            | Tingkat Pengaruh |
@@ -87,10 +68,9 @@ Klik tombol **Predict Attrition**
 | 5         | `StockOptionLevel` | 7.96%            |
 
 ### Performa Model Prediksi *Attrition*
-Model *Gradient Boosting Classifier* dimanfaatkan untuk memprediksi risiko seorang karyawan meninggalkan perusahaan (*attrition*). Proses pelatihan model ini melibatkan analisis data karyawan yang ada, dengan mengandalkan serangkaian **fitur utama sebagai input prediksi**. Fitur-fitur tersebut mencakup `Age`, `BusinessTravel`, `DailyRate`, `Department`, `DistanceFromHome`, `Education`, `EnvironmentSatisfaction`, `Gender`, `JobInvolvement`, `JobLevel`, `JobRole`, `JobSatisfaction`, `MaritalStatus`, `MonthlyIncome`, `MonthlyRate`, `NumCompaniesWorked`, `OverTime`, `PercentSalaryHike`, `PerformanceRating`, `RelationshipSatisfaction`, `StockOptionLevel`, `TotalWorkingYears`, `TrainingTimesLastYear`, `WorkLifeBalance`, `YearsAtCompany`, `YearsInCurrentRole`, `YearsSinceLastPromotion`, dan `YearsWithCurrManager`. Melalui pembelajaran dari pola data historis, model ini mampu mengidentifikasi karyawan dengan karakteristik serupa dengan mereka yang telah mengalami *attrition* sebelumnya.
+Model *Gradient Boosting Classifier* dimanfaatkan untuk memprediksi risiko seorang karyawan meninggalkan perusahaan (*attrition*). Proses pelatihan model ini melibatkan analisis data karyawan yang ada, dengan mengandalkan serangkaian **fitur utama sebagai input prediksi**. Melalui pembelajaran dari pola data historis, model ini mampu mengidentifikasi karyawan dengan karakteristik serupa dengan mereka yang telah mengalami *attrition* sebelumnya.
 
 ### Performa Model
-
 | Metric    | Training | Testing |
 | --------- | -------- | ------- |
 | Accuracy  | 0.97     | 0.88    |
@@ -98,8 +78,7 @@ Model *Gradient Boosting Classifier* dimanfaatkan untuk memprediksi risiko seora
 | Recall    | 0.98     | 0.89    |
 | F1-Score  | 0.97     | 0.87    |
 
-## Kesimpulan
-
+## Conclusion
 Berdasarkan analisis data karyawan, beberapa faktor signifikan berkontribusi terhadap tingkat *attrition* di perusahaan Jaya Jaya Maju.
 
 * **Faktor Pengaruh Utama:** *OverTime* menjadi faktor dengan tingkat kepentingan tertinggi dalam memprediksi *attrition* (0.119), diikuti oleh *MonthlyIncome* (0.097), *Age* (0.085), *DailyRate* (0.081), dan *StockOptionLevel* (0.080).
@@ -113,7 +92,7 @@ Berdasarkan analisis data karyawan, beberapa faktor signifikan berkontribusi ter
 * **OverTime:** Karyawan yang sering bekerja lembur memiliki tingkat *attrition* yang jauh lebih tinggi (31.92%) dibandingkan dengan mereka yang tidak (10.79%).
 * **StockOptionLevel:** Tingkat opsi saham 0 memiliki tingkat *attrition* tertinggi (25.69%).
 
-## Rekomendasi Action Items
+## Rekomendasi Action Items (Optional)
 
 Berdasarkan kesimpulan di atas, perusahaan Jaya Jaya Maju dapat mempertimbangkan tindakan berikut:
 
@@ -124,6 +103,14 @@ Berdasarkan kesimpulan di atas, perusahaan Jaya Jaya Maju dapat mempertimbangkan
 5.  **Promosikan Work-Life Balance:** Tinjau dan tingkatkan kebijakan dan budaya kerja untuk mendukung *work-life balance* karyawan.
 6.  **Evaluasi Kebijakan Opsi Saham:** Pertimbangkan kembali kebijakan opsi saham untuk membuatnya lebih menarik, terutama bagi karyawan yang belum memiliki opsi saham.
 7.  **Analisis Lebih Lanjut:** Lakukan analisis lebih mendalam untuk memahami alasan spesifik di balik tingkat *attrition* yang tinggi di departemen, peran, dan kelompok usia tertentu.
+
+## Menjalankan Aplikasi Predict
+```bash
+`streamlit run src/prediction.py`
+```
+Buka *browser* di `http://localhost:8501`\
+Isi *form input* sesuai data karyawan\
+Klik tombol **Predict Attrition**
 
 ## Kontak
 
