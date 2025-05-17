@@ -78,6 +78,14 @@ Model *Gradient Boosting Classifier* dimanfaatkan untuk memprediksi risiko seora
 | Recall    | 0.98     | 0.89    |
 | F1-Score  | 0.97     | 0.87    |
 
+## Menjalankan Aplikasi Predict
+```bash
+`streamlit run src/prediction.py`
+```
+Buka *browser* di `http://localhost:8501`\
+Isi *form input* sesuai data karyawan\
+Klik tombol **Predict Attrition**
+
 ## Conclusion
 Berdasarkan analisis data karyawan, beberapa faktor signifikan berkontribusi terhadap tingkat *attrition* di perusahaan Jaya Jaya Maju.
 
@@ -103,14 +111,6 @@ Berdasarkan kesimpulan di atas, perusahaan Jaya Jaya Maju dapat mempertimbangkan
 5.  **Promosikan Work-Life Balance:** Tinjau dan tingkatkan kebijakan dan budaya kerja untuk mendukung *work-life balance* karyawan.
 6.  **Evaluasi Kebijakan Opsi Saham:** Pertimbangkan kembali kebijakan opsi saham untuk membuatnya lebih menarik, terutama bagi karyawan yang belum memiliki opsi saham.
 7.  **Analisis Lebih Lanjut:** Lakukan analisis lebih mendalam untuk memahami alasan spesifik di balik tingkat *attrition* yang tinggi di departemen, peran, dan kelompok usia tertentu.
-
-## Menjalankan Aplikasi Predict
-```bash
-`streamlit run src/prediction.py`
-```
-Buka *browser* di `http://localhost:8501`\
-Isi *form input* sesuai data karyawan\
-Klik tombol **Predict Attrition**
 
 ## Kontak
 
