@@ -116,4 +116,4 @@ Berdasarkan kesimpulan di atas, perusahaan Jaya Jaya Maju dapat mempertimbangkan
 
 - Nama: Rasyid Alfiansyah
 - Email: `rasyidalfiansyh@gmail.com`
-- Dicoding ID: rasyidalfiansyh
+- Dicoding ID: rasyid_alfiansyah
