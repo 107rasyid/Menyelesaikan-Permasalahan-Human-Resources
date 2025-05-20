@@ -54,7 +54,7 @@ Anda dapat mengakses dashboard interaktif melalui tautan berikut:
 
 Berikut adalah tampilan *screenshot* dari *dashboard* yang telah dibuat:
 
-![Tampilan Dashboard](dashboard-preview.png)
+![Tampilan Dashboard](rasyid_alfiansyah-dashboard.png)
 
 ## Hasil Analisis
 ### Faktor Penentu *Attrition*
